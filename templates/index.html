@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+</head>
+<body>
+<h1>THis is the HTML INDEX page! </h1>
+<a href="{% url 'hello'%}" >MOVE towards HELLO page </a>
+<br>
+<br>
+<form action ="{% url 'hello' %}">
+{% csrf_token %}
+    <input type="text" name="user_name">
+    <input type="text" name="user_age">
+    <input type="submit" name="submit">
+
+</form>
+
+</body>
+</html>
